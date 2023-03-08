@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(name = "users", url = "http://localhost:8080/api")
+@FeignClient(value = "users-service", url = "postgresql://localhost:5432")
 public interface UserFeignClient {
 
     @GetMapping("/client")
